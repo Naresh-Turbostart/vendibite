@@ -1,4 +1,5 @@
 
+import ContactForm from "@/components/contact/ContactForm";
 import BuiltOnce from "@/components/home/BuiltOnce";
 import Bussiness from "@/components/home/Bussiness";
 import Cta from "@/components/home/Cta";
@@ -18,6 +19,7 @@ export default function Home() {
       <MadeInIndia/>
       <WhyOperators/>
       <Cta/>
+      <ContactForm/>
     </div>
   );
 }

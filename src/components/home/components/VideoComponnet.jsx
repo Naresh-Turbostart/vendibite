@@ -92,7 +92,7 @@ export default function VideoComponent() {
       <div className="flex  w-full flex-col items-center justify-center px-4 py-12 text-center text-white md:max-h-[200vh]">
         {/* Video Section */}
         <div className=" bg-gradient-to-b from-white to-black rounded-xl flex w-full justify-center p-[0.75px]">
-          <div className="relative aspect-video w-[85%] max-w-[1000px] overflow-hidden rounded-xl shadow-lg md:w-[600px]">
+          <div className="relative bg-black aspect-video w-[100%] max-w-[1000px] overflow-hidden rounded-xl shadow-lg md:w-[600px]">
             <iframe
               id="hero-video-iframe"
               src="https://www.youtube.com/embed/4LnGQ-JTGcs?autoplay=1&mute=1&loop=1&playlist=4LnGQ-JTGcs&controls=0&modestbranding=1&rel=0&playsinline=1&fs=0&disablekb=1&enablejsapi=1"
@@ -106,15 +106,15 @@ export default function VideoComponent() {
             <Image
               src={ideaBaazLogo}
               alt="IdeaBaaz Logo"
-              className="absolute left-4 top-4 w-[120px] md:left-6 md:top-6 md:w-[60px]"
+              className="absolute left-4 top-4 w-[40px] md:left-6 md:top-6 md:w-[60px]"
             />
 
             {/* Bottom Text Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 flex flex-col items-start p-6 md:p-5">
-              <h4 className=" w-[40%] text-left text-[24px] font-medium md:w-[50%] md:text-lg">
+            <div className="absolute bottom-0 left-0 right-0 flex flex-col items-start p-3 md:p-5">
+              <h4 className=" w-[60%] text-[10px] text-left  font-medium md:w-[50%] md:text-lg">
                 VendiBite Featured on IdeaBaaz
               </h4>
-              <p className=" mb-4 text-left text-[12px] leading-3 font-light md:text-[10px]">
+              <p className=" mb-2 md:mb-4 text-left text-[8px] leading-3 font-light md:text-[10px]">
                 Showcasing India’s innovation in unmanned access technology.
               </p>
               <div className="flex items-center gap-2">
@@ -125,18 +125,18 @@ export default function VideoComponent() {
                       "_blank"
                     )
                   }
-                  className="rounded-md bg-[#B73601] px-4 py-2 text-[10px] underline decoration-[0.5px] text-white font-light md:px-4 md:py-1 md:text-[10px]"
+                  className="rounded-md bg-[#B73601] px-2 py-1 text-[8px] underline decoration-[0.5px] text-white font-light md:px-4 md:py-1 md:text-[10px]"
                 >
                   Watch Now
                 </button>
                 <div className="flex items-center gap-2">
-                  <span className="opacity-80 text-sm md:text-[10px]">
+                  <span className="opacity-80 text-[8px] md:text-[10px]">
                     Only on
                   </span>
                   <Image
                     src={ZeeLogo}
                     alt="Zee Logo"
-                    className="w-[80px] md:w-[50px]"
+                    className="w-[40px] md:w-[50px]"
                   />
                 </div>
               </div>

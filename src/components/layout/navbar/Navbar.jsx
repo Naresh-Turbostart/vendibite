@@ -104,46 +104,51 @@ Watch the Feature                </a>
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-200">
+        <div className="lg:hidden bg-[#0c0b2a] border-t border-gray-200">
           <div className="px-4 pt-4 pb-6 space-y-4">
             <a
               href="#about"
               className="block text-white hover:text-[#FF8730] transition-colors duration-200  py-2 text-sm"
             >
-              About
+              Home
             </a>
             <a
               href="#solution"
               className="block text-white hover:text-[#FF8730] transition-colors duration-200  py-2 text-sm"
             >
-              Solution
+              About
             </a>
             <a
                   href="#e-stamp"
               className="block text-white hover:text-[#FF8730] transition-colors duration-200  py-2 text-sm"
             >
-              E-Stamp
+              Tech
             </a>
             <a
                   href="#ideabaaz"
               className="block text-white hover:text-[#FF8730] transition-colors duration-200  py-2 text-sm"
             >
-              Ideabaaz
+              Application
             </a>
             <a
               href="#Opportunities"
               className="block text-white hover:text-[#FF8730] transition-colors duration-200  py-2 text-sm"
             >
-              Opportunities
+              Manufacturing
+            </a>
+            <a
+              href="#Opportunities"
+              className="block text-white hover:text-[#FF8730] transition-colors duration-200  py-2 text-sm"
+            >
+              Partners
             </a>
             <div className="pt-4">
-              <button className="w-full bg-[#4DABE1] text-white px-6 py-3 rounded-full hover:bg-[#3a9cc7] transition-all duration-200  text-sm">
+              <button className="  bg-[#BEFF4E]  w-full text-black px-6 xl:px-10 py-3 font-semibold transition-all duration-200  text-sm xl:text-base">
                 <a
                   href="#getintouch"
-                  className="text-white transition-colors duration-200  text-sm whitespace-nowrap"
+                  className="  transition-colors duration-200  text-sm xl:text-base whitespace-nowrap"
                 >
-                  Get in touch →
-                </a>
+Watch the Feature                </a>
               </button>
             </div>
           </div>

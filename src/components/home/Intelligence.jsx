@@ -27,8 +27,8 @@ const Intelligence = () => {
     <section className="bg-[#001744] text-white padding-top padding-bottom ">
       <div className="section-width">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <p className=" tracking-widest header-text  uppercase mb-4">
+        <div className="text-center max-w-3xl 2xl:max-w-5xl mx-auto mb-10">
+          <p className=" tracking-widest header-text  uppercase">
             ENGINEERING MEETS INTELLIGENCE{" "}
           </p>
           <h2 className="  ">
@@ -48,18 +48,18 @@ const Intelligence = () => {
             {cards.map((card, index) => (
               <div
                 key={card.id}
-                className={`flex flex-col items-center justify-center text-center px-8 py-16 ${
+                className={`flex flex-col items-center  text-center px-8 py-8 md:py-16 ${
                   index !== cards.length - 1
                     ? "border-b md:border-b-0 md:border-r-[4px] border-[#293C62]"
                     : ""
                 }`}
               >
                 <div className="mb-5">{card.icon}</div>
-                <h3 className="text-xl max-w-[200px] md:text-2xl font-medium tracking-normal mb-6">
+                <h3 className="text-xl max-w-[200px] lg:text-2xl font-medium tracking-normal mb-3 md:mb-6">
                   {card.title}
                 </h3>
-                <div className="w-16 h-[2px] bg-[#293C62] mb-6" />
-                <p className=" text-white leading-relaxed max-w-[220px]">
+                <div className="w-16 h-[1px] md:h-[2px] bg-[#293C62] mb-3 md:mb-6" />
+                <p className=" text-white leading-relaxed  max-w-[250px] md:max-w-[220px]">
                   {card.desc}
                 </p>
               </div>
@@ -67,9 +67,9 @@ const Intelligence = () => {
           </div>
 
           {/* Bottom Quote */}
-          <div className="py-6 text-center text-[#C9D2E4] text-[15px]  bg-gradient-to-r from-[#172D56] to-[#021946]">
+          <h3 className="py-6 text-center px-4 text-white   bg-gradient-to-r from-[#172D56] to-[#021946]">
             “Others sell machines. We sell access and reliability.”
-          </div>
+          </h3>
         </div>
       </div>
     </section>

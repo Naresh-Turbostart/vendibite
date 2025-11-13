@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -11,7 +13,6 @@
       rel="stylesheet"
     />
 
-    <script src="https://cdn.tailwindcss.com"></script>
 
     <link
       rel="stylesheet"
@@ -21,12 +22,14 @@
     <title>Lead Form</title>
 
     <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background: transparent;
-        margin: 0;
-        padding: 20px;
-      }
+     body {
+  font-family: "Inter", sans-serif;
+  /* background: transparent;
+  margin: 0;
+  padding: 20px; */
+}
+
+
       .custom-input {
         background: transparent;
         border: 1px solid rgba(75, 85, 99, 0.5);
@@ -47,81 +50,9 @@
       .iti input#phone { padding-left: 64px !important; }
       .iti input#phone::placeholder { text-indent: 0.5rem; }
       
-      /* Custom Dropdown Styles */
-      .custom-dropdown {
-        position: relative;
-        width: 100%;
-      }
-      
-      .custom-dropdown-trigger {
-        background: transparent;
-        border: 1px solid rgba(75, 85, 99, 0.5);
-        color: white;
-        width: 100%;
-        padding: 12px 16px;
-        border-radius: 0.375rem;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: all 0.2s;
-      }
-      
-      .custom-dropdown-trigger:focus {
-        outline: none;
-        border-color: rgba(75, 85, 99, 0.5);
-      }
-      
-      .custom-dropdown-trigger.placeholder {
-        color: white;
-      }
-      
-      .custom-dropdown-arrow {
-        width: 10px;
-        height: 6px;
-        transition: transform 0.2s;
-      }
-      
-      .custom-dropdown-trigger.open .custom-dropdown-arrow {
-        transform: rotate(180deg);
-      }
-      
-      .custom-dropdown-menu {
-        position: absolute;
-        bottom: 100%;
-        left: 0;
-        right: 0;
-        background: #000000;
-        border: 1px solid rgba(75, 85, 99, 0.5);
-        border-radius: 0.375rem;
-        margin-bottom: 4px;
-        max-height: 200px;
-        overflow-y: auto;
-        z-index: 1000;
-        display: none;
-      }
-      
-      .custom-dropdown-menu.open {
-        display: block;
-      }
-      
-      .custom-dropdown-item {
-        padding: 12px 16px;
-        color: white;
-        cursor: pointer;
-        transition: background 0.2s;
-      }
-      
-      .custom-dropdown-item:hover {
-        background: rgba(75, 85, 99, 0.3);
-      }
-      
-      .custom-dropdown-item.selected {
-        background: rgba(127, 128, 129, 0.2);
-      }
     </style>
   </head>
-  <body class="text-white">
+  <body class="text-white xl:pt-7 lg:px-5 lg:pb-5 p-5">
     <form
       id="leadForm"
       action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
@@ -177,23 +108,6 @@
             class="w-full px-4 py-3 rounded custom-input focus:outline-none transition-all"
           />
         </div>
-        
-        <!-- Custom Dropdown -->
-        <div class="custom-dropdown" id="customDropdown">
-          <div class="custom-dropdown-trigger" id="dropdownTrigger" tabindex="0">
-            <span id="dropdownText" class="placeholder">Interested On</span>
-            <svg class="custom-dropdown-arrow" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1.25L5 4.75L9 1.25" stroke="#F9FAFB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="custom-dropdown-menu" id="dropdownMenu">
-            <div class="custom-dropdown-item" data-value="Franchise">Franchise</div>
-            <div class="custom-dropdown-item" data-value="Buy/Lease">Buy/Lease</div>
-            <div class="custom-dropdown-item" data-value="Partner With Shop">Partner With Shop</div>
-          </div>
-          <input type="hidden" name="interested_on__c" id="interestedOnInput" required />
-        </div>
-        
         <div>
           <button
             type="submit"
@@ -221,7 +135,6 @@
           lastName: (properties.lastName || "").trim(),
           email: (properties.email || "").trim(),
           phone: (properties.phone || "").trim(),
-          interestedOn: (properties.interestedOn || "").trim(),
           source: properties.source || "public/form.html",
         };
 
@@ -265,19 +178,12 @@
         const form = document.getElementById("leadForm");
         const emailInput = document.getElementById("email");
         const phoneElement = document.getElementById("phone");
-        const interestedOnInput = document.getElementById("interestedOnInput");
 
         // Email validation
         const email = emailInput.value.trim();
         if (!validateEmail(email)) {
           showEmailError(true);
           emailInput.focus();
-          return;
-        }
-
-        // Check if dropdown is selected
-        if (!interestedOnInput.value) {
-          alert("Please select an option from 'Interested On'");
           return;
         }
 
@@ -292,7 +198,6 @@
           lastName: formData.get("last_name"),
           email: formData.get("email"),
           phone: formData.get("phone"),
-          interestedOn: formData.get("interested_on__c"),
         });
 
         // Submit to Salesforce in hidden iframe
@@ -303,13 +208,6 @@
         showEmailError(false);
         if (phoneInputInstance) phoneInputInstance.setNumber("");
         
-        // Reset custom dropdown
-        document.getElementById("dropdownText").textContent = "Interested On";
-        document.getElementById("dropdownText").classList.add("placeholder");
-        document.querySelectorAll(".custom-dropdown-item").forEach(item => {
-          item.classList.remove("selected");
-        });
-
         // Notify parent (optional)
         try { window.parent?.postMessage("formSubmitted", "*"); } catch (e) {}
 
@@ -323,64 +221,10 @@
         }, 300);
       }
 
-      // Custom Dropdown Logic
-      function initCustomDropdown() {
-        const trigger = document.getElementById("dropdownTrigger");
-        const menu = document.getElementById("dropdownMenu");
-        const dropdownText = document.getElementById("dropdownText");
-        const hiddenInput = document.getElementById("interestedOnInput");
-        const items = document.querySelectorAll(".custom-dropdown-item");
-
-        // Toggle dropdown
-        trigger.addEventListener("click", function(e) {
-          e.stopPropagation();
-          trigger.classList.toggle("open");
-          menu.classList.toggle("open");
-        });
-
-        // Handle item selection
-        items.forEach(item => {
-          item.addEventListener("click", function(e) {
-            e.stopPropagation();
-            const value = this.getAttribute("data-value");
-            
-            // Update UI
-            dropdownText.textContent = value;
-            dropdownText.classList.remove("placeholder");
-            hiddenInput.value = value;
-            
-            // Update selected state
-            items.forEach(i => i.classList.remove("selected"));
-            this.classList.add("selected");
-            
-            // Close dropdown
-            trigger.classList.remove("open");
-            menu.classList.remove("open");
-          });
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener("click", function() {
-          trigger.classList.remove("open");
-          menu.classList.remove("open");
-        });
-
-        // Keyboard support
-        trigger.addEventListener("keydown", function(e) {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            trigger.click();
-          }
-        });
-      }
-
       // Init
       document.addEventListener("DOMContentLoaded", function () {
         const phoneInput = document.querySelector("#phone");
         const emailInput = document.getElementById("email");
-
-        // Initialize custom dropdown
-        initCustomDropdown();
 
         if (phoneInput) {
           // Numeric-only typing
@@ -395,13 +239,14 @@
 
           // Initialize intl-tel-input
           phoneInputInstance = window.intlTelInput(phoneInput, {
-            initialCountry: "auto",
-            geoIpLookup: function (callback) {
-              fetch("https://ipapi.co/json")
-                .then((res) => res.json())
-                .then((data) => callback(data.country_code))
-                .catch(() => callback("us"));
-            },
+           initialCountry: "auto",
+geoIpLookup: function (callback) {
+  fetch("https://ipapi.co/json")
+    .then((res) => res.json())
+    .then((data) => callback(data.country_code || "in"))
+    .catch(() => callback("in")); // ✅ fallback to India
+},
+
             utilsScript:
               "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
             separateDialCode: false,
@@ -428,11 +273,6 @@
           form.reset();
           showEmailError(false);
           if (phoneInputInstance) phoneInputInstance.setNumber("");
-          document.getElementById("dropdownText").textContent = "Interested On";
-          document.getElementById("dropdownText").classList.add("placeholder");
-          document.querySelectorAll(".custom-dropdown-item").forEach(item => {
-            item.classList.remove("selected");
-          });
         }
       });
     </script>

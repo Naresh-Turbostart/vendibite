@@ -54,10 +54,11 @@ const ContactForm = () => {
       className="text-white section-width pb-10 py-5 margin-top"
       id="contact"
     >
-      <div className="container flex justify-center flex-col">
-        <h2 className="mb-3 sm:mb-4  text-center pb-3 sm:pb-8 tracking-normal text-[#020817]">
+       <h2 className="mb-3 sm:mb-4 w-full max-w-none  text-center pb-3 sm:pb-8 tracking-normal text-[#020817]">
           Get in Touch ?
         </h2>
+      <div className="container flex  justify-center flex-col">
+       
 
         {/* Form Section */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-4">
@@ -70,7 +71,7 @@ const ContactForm = () => {
                 src="form.html"
                 width="100%"
                 height="200"
-                className="w-full h-[355px] md:h-[360px] lg:h-[355px] xl:h-[250px] border-none"
+                className="w-full h-[290px] md:h-[290px] lg:h-[305px] xl:h-[250px] border-none"
                 title="Contact Form"
               />
             </div>

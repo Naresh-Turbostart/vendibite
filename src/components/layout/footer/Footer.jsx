@@ -175,7 +175,7 @@ const Footer = () => {
                     className="hover:opacity-80 transition-opacity"
                   >
                     <Image
-                src="/images/layout/youtube.svg"
+                src="/images/layout/face.png"
                 width={30}
                 height={30}
                 alt="facebook"
@@ -189,7 +189,7 @@ const Footer = () => {
                     className="hover:opacity-80 transition-opacity"
                   >
                     <Image
-                src="/images/footer/youtube.svg"
+                src="/images/layout/utube.png"
                 width={30}
                 height={30}
                 alt="utube"

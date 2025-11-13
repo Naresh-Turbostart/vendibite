@@ -1,6 +1,6 @@
 import mixpanel from "mixpanel-browser";
 
-const MixPanelId = "6d9aa12ba10e0a2f0b4f0507ab5da234"; // Same as form
+const MixPanelId = "b3d82a9de6a52dc136d42a2fb22b2e15"; 
 
 let isInitialized = false;
 

@@ -62,7 +62,7 @@ const ContactForm = () => {
         {/* Form Section */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-4">
           {/* Left Form - Takes 2/3 width on large screens */}
-          <div className="bg-gradient-to-b from-[#424242] to-[#020202] rounded-lg lg:col-span-2 custom-border card-background flex flex-col ">
+          <div className="bg-gradient-to-b from-[#001744] to-[#001744] rounded-lg lg:col-span-2 custom-border card-background flex flex-col ">
             {/* Iframe Form */}
             <div className="flex-grow">
               <iframe
@@ -80,7 +80,7 @@ const ContactForm = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {/* Second Card - Contact Number */}
 
-            <div className="bg-gradient-to-b from-[#424242] to-[#020202] p-4 sm:p-6 lg:py-10 xl:py-6 xl:p-6 rounded-lg custom-border card-background flex flex-col justify-center cursor-pointer">
+            <div className="bg-gradient-to-b from-[#001744] to-[#001744] p-4 sm:p-6 lg:py-10 xl:py-6 xl:p-6 rounded-lg custom-border card-background flex flex-col justify-center cursor-pointer">
               <div className="flex items-start gap-4 h-full">
                 <div className="flex-shrink-0">
                   <FaPhoneAlt className="xl:w-10 lg:w-8 md:w-8 w-10 h-full group-hover:text-white transition-colors text-[#BEFF4E]" />
@@ -104,7 +104,7 @@ const ContactForm = () => {
               href="mailto:kagpatradigitech@gmail.com"
               className="block transition-all duration-200"
             >
-              <div className="bg-gradient-to-b from-[#424242] to-[#020202] p-4 sm:p-6 lg:py-10 xl:py-6 lg:pl-4 xl:p-6  rounded-lg custom-border card-background flex flex-col justify-center cursor-pointer">
+              <div className="bg-gradient-to-b from-[#001744] to-[#001744] p-4 sm:p-6 lg:py-10 xl:py-6 lg:pl-4 xl:p-6  rounded-lg custom-border card-background flex flex-col justify-center cursor-pointer">
                 <div className="flex items-start gap-4 h-full">
                   <div className="flex-shrink-0">
                     <IoMdMail className="xl:w-10 lg:w-8 md:w-8 w-10 h-full group-hover:text-white transition-colors text-[#BEFF4E]" />
@@ -114,7 +114,7 @@ const ContactForm = () => {
                       Reach out to us
                     </h3>
                     <p className="text-gray-400 text-sm sm:text-base mb-1">
-                      contact@printbuddy.co.in
+                      contact@vendibite.co.in
                     </p>
                   </div>
                 </div>

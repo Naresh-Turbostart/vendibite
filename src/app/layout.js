@@ -2,8 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/navbar/Navbar";
 import Footer from "@/components/layout/footer/Footer";
 // import HeadTag from "@/components/SEO/HeadTag";
-// import MixpanelProvider from "@/components/tracking/MixpanelProvider";
-
+import MixpanelProvider from "@/components/tracking/MixpanelProvider";
 // const Inter = localFont({
 //   src: "./fonts/Inter-Regular.woff2",
 //   variable: "--font-inter",
@@ -83,8 +82,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           }}
         /> */}
 
-        {/* <MixpanelProvider /> */}
+        <MixpanelProvider />
         <Navbar />
+
         {children}
         <Footer />
       </body>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+
 const Footer = () => {
   return (
     <>
@@ -138,31 +139,63 @@ const Footer = () => {
                 <p className="mb-4 text-white text-base font-medium">
                   Follow Us{" "}
                 </p>
-                <div className="space-y-1 font-light">
-                  <p className="text-xs  text-white ">
-                    <Link
-                      href=""
-                      className="hover:text-[#FF8730] transition-colors"
-                    >
-                      LinkedIn
-                    </Link>
-                  </p>
-                  <p className="text-xs  text-white ">
-                    <Link
-                      href=""
-                      className="hover:text-[#FF8730] transition-colors"
-                    >
-                      Instagram
-                    </Link>
-                  </p>
-                  <p className="text-xs  text-white ">
-                    <Link
-                      href=""
-                      className="hover:text-[#FF8730] transition-colors"
-                    >
-                      You Tube
-                    </Link>
-                  </p>
+                <div className="space-x-1 flex font-light">
+                  <a
+                    href="https://www.linkedin.com/company/rapidosmart-automatics-pvt-ltd/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <Image
+                      src="/images/layout/link.png"
+                      width={30}
+                      height={30}
+                      alt="LinkedIn"
+                      unoptimized
+                    />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/vendibite/?igshid=ZDdkNTZiNTM%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <Image
+                src="/images/layout/insta.png"
+                width={30}
+                height={30}
+                alt="insta"
+                unoptimized
+              />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/people/VendiBite/100063943066238/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <Image
+                src="/images/layout/youtube.svg"
+                width={30}
+                height={30}
+                alt="facebook"
+                unoptimized
+              />
+                  </a>
+                  <a
+                    href="https://www.youtube.com/channel/UCmBjdUeFH4RPPVUajh6355w"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
+                    <Image
+                src="/images/footer/youtube.svg"
+                width={30}
+                height={30}
+                alt="utube"
+                unoptimized
+              />
+                  </a>
                 </div>
               </div>
             </div>

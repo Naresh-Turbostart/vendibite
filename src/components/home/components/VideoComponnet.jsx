@@ -89,7 +89,21 @@ export default function VideoComponent() {
 
   return (
     <section>
-      <div className="flex  w-full flex-col items-center justify-center px-4 py-12 text-center text-white md:max-h-[200vh]">
+      <div className="flex  w-full flex-col md:flex-col-reverse items-center justify-center px-4 py-8 md:py-12 text-center text-white md:max-h-[200vh]">
+         <div className="mb-6 md:mt-6 gap-3 flex flex-row justify-end items-end leading-none  header-text tracking-widest text-[#B6FF00] ">
+        
+                    <div>
+                      AS SEEN ON{" "}
+        
+                    </div>
+                      <Image
+                        src="/images/hero/ideabaazlogo.svg"
+                        width={1000}
+                        height={1000}
+                        alt="IdeaBaaz Logo"
+                        className=" w-[70px]  md:w-[70px]"
+                      />
+                    </div>
         {/* Video Section */}
         <div className=" bg-gradient-to-b from-white to-black rounded-xl flex w-full justify-center p-[0.75px]">
           <div className="relative bg-black aspect-video w-[100%] max-w-[1000px] overflow-hidden rounded-xl shadow-lg md:w-[600px]">

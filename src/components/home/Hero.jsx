@@ -12,7 +12,7 @@ const Hero = () => {
           {/* LEFT COLUMN */}
           <div className="flex flex-col items-center text-center md:items-start md:text-left">
             {/* Label */}
-            <div className="mb-3 gap-3  flex flex-row justify-end items-end leading-none  header-text tracking-widest text-[#B6FF00] ">
+            {/* <div className="mb-3 gap-3  hidden md:flex flex-row justify-end items-end leading-none  header-text tracking-widest text-[#B6FF00] ">
 
             <div>
               AS SEEN ON{" "}
@@ -25,7 +25,7 @@ const Hero = () => {
                 alt="IdeaBaaz Logo"
                 className=" w-[70px]  md:w-[70px]"
               />
-            </div>
+            </div> */}
 
             {/* Heading */}
             <h1 className=" text-white xl:whitespace-nowrap ">
@@ -87,11 +87,22 @@ const Hero = () => {
               <div className="text-[8px] ml-[6px] mr-1">•</div>
               <div>Ready for Any Environment</div>
             </p>
+
+            <p className="mt-6 text-sm flex  font-medium justify-center  items-center text-[#CECECE]">
+              <div>Vending Automation</div>
+              <div className="text-[16px] ml-[6px] mr-1">•</div>
+              <div>Mechatronics</div>
+              <div className="text-[16px] ml-[6px] mr-1">•</div>
+              <div>Robotics</div>
+              <div className="text-[16px] ml-[6px] mr-1">•</div>
+              <div>Unmanned Kiosk</div>
+            </p>
           </div>
 
           {/* RIGHT COLUMN — Video Section */}
           <div className="flex justify-center lg:justify-end">
             <div className="w-full">
+
               <VideoComponent />
             </div>
           </div>

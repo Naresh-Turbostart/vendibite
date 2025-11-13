@@ -94,7 +94,7 @@ const ContactForm = () => {
                     href="tel:9321226164"
                     className="text-gray-400 text-sm sm:text-base mb-1"
                   >
-                    +91 9321226164
+                    +91 8605-111-000
                   </a>
                 </div>
               </div>
@@ -115,7 +115,7 @@ const ContactForm = () => {
                       Reach out to us
                     </h3>
                     <p className="text-gray-400 text-sm sm:text-base mb-1">
-                      contact@vendibite.co.in
+                     global@vendibite.com
                     </p>
                   </div>
                 </div>
